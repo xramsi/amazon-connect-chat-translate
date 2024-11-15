@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"@aws-amplify/ui-react": "^6.5.5",
+		"@aws-amplify/storage": "^6.6.7",
 		"@babel/core": "7.24.3",
 		"@babel/plugin-syntax-flow": "^7.24.1",
 		"@babel/plugin-transform-react-jsx": "^7.23.4",
@@ -17,7 +17,7 @@
 		"@types/node": "*",
 		"amazon-connect-chatjs": "^2.2.4",
 		"amazon-connect-streams": "^2.14.0",
-		"aws-amplify": "^6.6.2",
+		"aws-amplify": "^6.8.2",
 		"aws-cdk-lib": "^2.134.0",
 		"constructs": "^10.3.0",
 		"craco-less": "^3.0.1",
