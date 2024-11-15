@@ -3,7 +3,11 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"@aws-amplify/storage": "^6.6.7",
+		"@aws-amplify/auth": "^6.4.2",
+		"@aws-amplify/core": "6.4.2",
+		"@aws-amplify/predictions": "^6.1.24",
+		"@aws-amplify/storage": "6.6.7",
+		"@aws-amplify/ui-react": "^6.1.6",
 		"@babel/core": "7.24.3",
 		"@babel/plugin-syntax-flow": "^7.24.1",
 		"@babel/plugin-transform-react-jsx": "^7.23.4",
