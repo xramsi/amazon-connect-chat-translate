@@ -12,10 +12,29 @@ import 'semantic-ui-less/semantic.less';
 
 // Amplify imports for base install
 import { Amplify } from "aws-amplify";
-import awsExports from "./aws-exports";
-Amplify.configure(awsExports);
-// 
+//import awsExports from "./aws-exports";
+//import { Authenticator } from '@aws-amplify/ui-react'
+//import '@aws-amplify/ui-react/styles.css'
+import { Auth } from 'aws-amplify'
 
+//Amplify.configure(awsExports);
+// 
+Amplify.configure({
+  Auth: {
+    Cognito: {
+      userPoolClientId: 'eud3venrcowtni0i',
+      userPoolId: 'eu-west-2_yN7Qy3u0K',
+      loginWith: { // Optional
+        oauth: {
+          responseType: 'code',
+        },
+        username: 'true',
+        email: 'true', // Optional
+        phone: 'false', // Optional
+      }
+    }
+  }
+});
 
 
 ReactDOM.render(
