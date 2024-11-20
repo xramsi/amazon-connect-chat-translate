@@ -1,7 +1,7 @@
 import { Amplify }  from '@aws-amplify/core';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-import awsconfig from './aws-exports';
+//import awsconfig from './aws-exports';
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import 'semantic-ui-less/semantic.less';
@@ -18,7 +18,23 @@ function App({ signOut, user }) {
   }, []);
 
   const configureAuth = () => {
-    Amplify.configure(awsconfig);
+    //Amplify.configure(awsconfig);
+    Amplify.configure({
+      Auth: {
+        Cognito: {
+          userPoolClientId: 'eud3venrcowtni0i',
+          userPoolId: 'eu-west-2_yN7Qy3u0K',
+          loginWith: { // Optional
+            oauth: {
+              responseType: 'code',
+            },
+            username: 'true',
+            email: 'true', // Optional
+            phone: 'false', // Optional
+          }
+        }
+      }
+    });
     setIsConfigured(true);
   };
   //const signedIn = async () => {
